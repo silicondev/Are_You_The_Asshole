@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Are You The Asshole?</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <!-- Vertical navbar -->
+    <div class="vertical-nav bg-white" id="sidebar">
+        <div class="py-4 px-3 mb-4 bg-light">
+            <p>...</p>
+        </div>
+
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item">
+                <a href="/Home/" class="nav-link text-dark font-italic bg-light">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Home/Rooms" class="nav-link text-dark font-italic">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    Rooms
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Home/Rules" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Rules
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/Home/Contact" class="nav-link text-dark font-italic">
+                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End vertical navbar -->
+    <!-- Page content holder -->
+    <div class="container body-content page-content p-5">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Silicon Entertainment Studios</p>
+        </footer>
+    </div>
+    <!-- End demo content -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
